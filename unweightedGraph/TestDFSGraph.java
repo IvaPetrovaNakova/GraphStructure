@@ -1,4 +1,7 @@
-package dataStructure.graphStructure;
+package dataStructure.graphStructure.unweightedGraph;
+
+import dataStructure.graphStructure.AbstractGraph;
+import dataStructure.graphStructure.Graph;
 
 import java.util.List;
 
@@ -29,7 +32,7 @@ public class TestDFSGraph {
                 {17, 6}, {17, 8}, {17, 14}, {17, 15}, {17, 16}
         };
 
-        Graph <String> graph = new UnweightedGraph<>(vertices, edges);
+        Graph<String> graph = new UnweightedGraph<>(vertices, edges);
         AbstractGraph<String>.Tree dfs = graph.dfs(graph.getIndex("Sofia"));
 
         List<Integer> searchOrders = dfs.getSearchOrder();

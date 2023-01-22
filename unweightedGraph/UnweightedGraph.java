@@ -1,4 +1,6 @@
-package dataStructure.graphStructure;
+package dataStructure.graphStructure.unweightedGraph;
+
+import dataStructure.graphStructure.AbstractGraph;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

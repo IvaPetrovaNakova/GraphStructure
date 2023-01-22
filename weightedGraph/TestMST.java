@@ -1,6 +1,8 @@
-package dataStructure.graphStructure;
+package dataStructure.graphStructure.weightedGraph;
 
-public class TestWeightedGraph {
+import dataStructure.graphStructure.weightedGraph.WeightedGraph;
+
+public class TestMST {
     public static void main(String[] args) {
         String[] vertices = {"Vidin", "Montana", "Vratza",
                 "Pleven", "Veliko Tarnovo", "Ruse", "Shumen", "Dobrich",
@@ -27,23 +29,12 @@ public class TestWeightedGraph {
                 {17, 6, 115}, {17, 8, 118}, {17, 14, 143}, {17, 15, 160}, {17, 16, 72}
         };
 
-        WeightedGraph<String> graph = new WeightedGraph<>(vertices, edges);
-        System.out.println("The number of vertices in graph: " + graph.getSize());
-        System.out.println("The vertex with index 10 is " + graph.getVertex(10));
-        System.out.println("The index for Sofia is " + graph.getIndex("Sofia"));
-        System.out.println("The edges for graph1:");
-        graph.printWeightedEdges();
+        WeightedGraph<String> graph1 = new WeightedGraph<>(vertices, edges);
+        WeightedGraph<String>.MST tree1 = graph1.getMinimumSpanningTree();
 
-        edges = new int[][] {
-                {0, 1, 2}, {0, 3, 8},
-                {1, 0, 2}, {1, 2, 7}, {1, 3, 3},
-                {2, 1, 7}, {2, 3, 4}, {2, 4, 5},
-                {3, 0, 8}, {3, 1, 3}, {3, 2, 4}, {3, 4, 6},
-                {4, 2, 5}, {4, 3, 6}
-        };
-        WeightedGraph<Integer> graph1 = new WeightedGraph<>(edges, 5);
-        System.out.println("\nThe edges for graph2:");
-        graph1.printWeightedEdges();
+        System.out.println("Total weight is " + tree1.getTotalWeight());
+        tree1.printTree();
+
 
     }
 }

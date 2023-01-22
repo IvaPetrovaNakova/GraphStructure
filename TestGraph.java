@@ -1,5 +1,7 @@
 package dataStructure.graphStructure;
 
+import dataStructure.graphStructure.unweightedGraph.UnweightedGraph;
+
 public class TestGraph {
     public static void main(String[] args) {
         String[] vertices = {"Vidin", "Montana", "Vratza",

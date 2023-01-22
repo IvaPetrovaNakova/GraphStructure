@@ -1,4 +1,6 @@
-package dataStructure.graphStructure;
+package dataStructure.graphStructure.weightedGraph;
+
+import dataStructure.graphStructure.AbstractGraph;
 
 public class WeightedEdge extends AbstractGraph.Edge implements Comparable<WeightedEdge>{
     public double weight; // The weight on edge (u, v)

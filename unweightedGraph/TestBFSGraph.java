@@ -1,4 +1,7 @@
-package dataStructure.graphStructure;
+package dataStructure.graphStructure.unweightedGraph;
+
+import dataStructure.graphStructure.AbstractGraph;
+import dataStructure.graphStructure.Graph;
 
 import java.util.List;
 
